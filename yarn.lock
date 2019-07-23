@@ -6656,9 +6656,9 @@ prismic-javascript@^1.5.0:
     cross-fetch "^2.2.0"
     promise-polyfill "8.0.0"
 
-prismic-nuxt@Atinux/prismic-nuxt:
+prismic-nuxt@Atinux/prismic-nuxt#feat-improvements:
   version "0.5.1"
-  resolved "https://codeload.github.com/Atinux/prismic-nuxt/tar.gz/1cf9715f06ee53b55358be1fe63cf9dccf00c7fd"
+  resolved "https://codeload.github.com/Atinux/prismic-nuxt/tar.gz/abf03da56c8bd737c0494950f8fa70411c853f26"
   dependencies:
     prismic-dom "^2.1.0"
     prismic-javascript "^1.5.0"

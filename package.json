@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "nuxt": "^2.8.1",
-    "prismic-nuxt": "Atinux/prismic-nuxt",
+    "prismic-nuxt": "Atinux/prismic-nuxt#feat-improvements",
     "prismic-vue": "^1.3.0"
   },
   "devDependencies": {
