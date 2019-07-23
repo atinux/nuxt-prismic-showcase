@@ -28,7 +28,7 @@
           <numeroted-items :slice="slice" />
         </div>
         <div v-if="slice.slice_type === 'separator'" class="homepage-slice-wrapper">
-          <separator :slice="slice" />
+          <separator />
         </div>
         <div v-if="slice.slice_type === 'text_block'" class="homepage-slice-wrapper">
           <text-block :slice="slice" />
@@ -43,7 +43,6 @@
 import ProductsGrid from '~/components/slices/ProductsGrid.vue'
 import CtaBanner from '~/components/slices/CtaBanner.vue'
 import NumerotedItems from '~/components/slices/NumerotedItems.vue'
-import Separator from '~/components/slices/Separator.vue'
 import TextBlock from '~/components/slices/TextBlock.vue'
 
 const graphQuery = `
@@ -105,7 +104,6 @@ export default {
     ProductsGrid,
     CtaBanner,
     NumerotedItems,
-    Separator,
     TextBlock
   },
   head: {

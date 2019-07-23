@@ -14,6 +14,10 @@ export default {
     '~/assets/scss/main.scss'
   ],
 
+  plugins: [
+    '~/components/index'
+  ],
+
   /*
   ** Nuxt.js Modules
   */

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="l-wrapper">
-      <hr class="separator-hr">
-    </div>
+    <separator />
     <article class="blog-post-article">
       <div class="blog-post-inner">
         <div class="blog-post-image-wrapper">

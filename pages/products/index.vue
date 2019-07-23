@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div class="l-wrapper">
-      <hr class="separator-hr">
-    </div>
-
+    <separator />
     <section class="products-section">
       <div class="l-wrapper">
         <header class="products-grid-header">

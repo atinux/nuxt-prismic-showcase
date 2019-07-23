@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="l-wrapper">
-      <hr class="separator-hr">
-    </div>
+    <separator />
     <div class="product-sections-wrapper">
       <section>
         <div class="l-wrapper">
@@ -31,9 +29,7 @@
         </div>
       </section>
       <div class="product-separator-wrapper">
-        <div class="l-wrapper">
-          <hr class="separator-hr">
-        </div>
+        <separator />
       </div>
       <section>
         <div class="l-wrapper">
