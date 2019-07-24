@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-wio-id="product.id">
     <separator />
     <div class="product-sections-wrapper">
       <section>
@@ -59,7 +59,6 @@
         </div>
       </section>
     </div>
-    <div :data-wio-id="product.id" />
   </div>
 </template>
 

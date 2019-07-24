@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-wio-id="home.id">
     <header class="homepage-header">
       <div class="l-wrapper">
         <div class="homepage-header-title" v-html="$prismic.asHtml(home.data.title)" />
@@ -35,7 +35,6 @@
         </div>
       </div>
     </div>
-    <div :data-wio-id="home.id" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :data-wio-id="blogpost.id">
     <separator />
     <article class="blog-post-article">
       <div class="blog-post-inner">
@@ -25,7 +25,6 @@
         </div>
       </div>
     </article>
-    <div :data-wio-id="blogpost.id" />
   </div>
 </template>
 
