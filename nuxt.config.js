@@ -22,12 +22,13 @@ export default {
   ** Nuxt.js Modules
   */
   modules: [
+    '~/modules/crawler',
+    '~/modules/static',
     'prismic-nuxt'
   ],
 
   prismic: {
-    endpoint: 'https://prismic-vuejs-showcase.prismic.io/api/v2',
-    linkResolver: require('./app/prismic/link-resolver')
+    endpoint: 'https://prismic-vuejs-showcase.prismic.io/api/v2'
   },
 
   /*
