@@ -1,5 +1,5 @@
 export const state = () => ({
-  layout: null
+  layout: {}
 })
 
 export const mutations = {
