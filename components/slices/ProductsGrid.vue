@@ -16,12 +16,12 @@
         :key="index"
         class="products-grid-item-wrapper"
       >
-        <prismic-image class="products-grid-item-image" :field="item.link_to_product.data.product_image" />
-        <p class="products-grid-item-name">
-          <prismic-link :field="item.link_to_product">
+        <prismic-link :field="item.link_to_product">
+          <prismic-image class="products-grid-item-image" :field="item.link_to_product.data.product_image" />
+          <p class="products-grid-item-name">
             {{ $prismic.asText(item.link_to_product.data.product_name) }}
-          </prismic-link>
-        </p>
+          </p>
+        </prismic-link>
         <p class="products-grid-item-subtitle">
           {{ $prismic.asText(item.link_to_product.data.sub_title) }}
         </p>

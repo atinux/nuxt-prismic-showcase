@@ -9,18 +9,18 @@
       </div>
       <div class="products-grid-items-wrapper">
         <div
-          v-for="(document, index) in productList"
-          :key="index"
+          v-for="product in productList"
+          :key="product.uid"
           class="products-grid-item-wrapper"
         >
-          <nuxt-link class="product" :to="{ name: 'products-uid', params: { uid: document.uid } }">
-            <prismic-image class="products-grid-item-image" :field="document.data.product_image" />
+          <nuxt-link class="product" :to="{ name: 'products-uid', params: { uid: product.uid } }">
+            <prismic-image class="products-grid-item-image" :field="product.data.product_image" />
             <p class="products-grid-item-name">
-              {{ $prismic.asText(document.data.product_name) }}
+              {{ $prismic.asText(product.data.product_name) }}
             </p>
           </nuxt-link>
           <p class="products-grid-item-subtitle">
-            {{ $prismic.asText(document.data.sub_title) }}
+            {{ $prismic.asText(product.data.sub_title) }}
           </p>
         </div>
       </div>
@@ -130,9 +130,5 @@ export default {
   margin-top: 10px;
   color: #7f7d7c;
   text-align: center;
-}
-
-.product {
-  cursor: pointer;
 }
 </style>

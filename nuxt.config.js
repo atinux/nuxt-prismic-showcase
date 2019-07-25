@@ -28,7 +28,8 @@ export default {
   ],
 
   prismic: {
-    endpoint: 'https://prismic-vuejs-showcase.prismic.io/api/v2'
+    endpoint: 'https://prismic-vuejs-showcase.prismic.io/api/v2',
+    preview: '/preview/' // because we use nuxt generate
   },
 
   /*

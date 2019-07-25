@@ -43,15 +43,15 @@
             :key="index"
             class="products-grid-item-wrapper"
           >
-            <prismic-image
-              class="products-grid-item-image"
-              :field="item.product1.data.product_image"
-            />
-            <p class="products-grid-item-name">
-              <prismic-link :field="item.product1">
+            <prismic-link :field="item.product1">
+              <prismic-image
+                class="products-grid-item-image"
+                :field="item.product1.data.product_image"
+              />
+              <p class="products-grid-item-name">
                 {{ $prismic.asText(item.product1.data.product_name) }}
-              </prismic-link>
-            </p>
+              </p>
+            </prismic-link>
             <p class="products-grid-item-subtitle">
               {{ $prismic.asText(item.product1.data.sub_title) }}
             </p>
