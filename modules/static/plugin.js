@@ -1,6 +1,8 @@
 import { getMatchedComponents } from './utils.js'
 import Middleware from './middleware'
 
+const hasStaticAsyncData = (Component) => Boolean(Component.options.asyncData) && Component.options.static !== false
+
 Middleware.nuxt_static = async ({ app, route }) => {
   // Ignore on server
   if (process.server) return
@@ -10,12 +12,12 @@ Middleware.nuxt_static = async ({ app, route }) => {
   const Components = getMatchedComponents(route)
   Components.forEach(Component => {
     Component._payloads = Component._payloads || {}
-    if (Component.options.asyncData) {
+    if (hasStaticAsyncData(Component)) {
       Component.options.asyncData = ({ route }) => Component._payloads[route.path.replace(/\/$/, '')]
     }
   })
   const path = route.path.replace(/\/$/, '')
-  const needFetch = Components.some(Component => Component.options.asyncData && !Component._payloads[path])
+  const needFetch = Components.some(Component => hasStaticAsyncData(Component) && !Component._payloads[path])
   if (!needFetch) {
     return
   }
@@ -27,7 +29,7 @@ Middleware.nuxt_static = async ({ app, route }) => {
   if (!pageDatas) return console.error(`[@nuxt/static] Could not fetch ${payloadPath}`)
 
   Components.forEach((Component, index) => {
-    if (Component.options.asyncData) {
+    if (hasStaticAsyncData(Component)) {
       Component._payloads[path] = pageDatas[index]
     }
   })
