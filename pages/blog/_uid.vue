@@ -1,5 +1,5 @@
 <template>
-  <div :data-wio-id="blogpost.id">
+  <div>
     <separator />
     <article class="blog-post-article">
       <div class="blog-post-inner">

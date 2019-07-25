@@ -1,5 +1,5 @@
 <template>
-  <div :data-wio-id="blogHome.id">
+  <div>
     <separator />
     <section class="blog-home-section">
       <div class="blog-home-posts-wrapper">

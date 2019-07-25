@@ -1,5 +1,5 @@
 <template>
-  <div :data-wio-id="home.id">
+  <div>
     <header class="homepage-header">
       <div class="l-wrapper">
         <div class="homepage-header-title" v-html="$prismic.asHtml(home.data.title)" />

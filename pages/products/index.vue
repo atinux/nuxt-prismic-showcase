@@ -1,5 +1,5 @@
 <template>
-  <div :data-wio-id="productsDocument.id">
+  <div>
     <separator />
     <section class="products-section">
       <div class="l-wrapper">
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  async asyncData ({ $prismic }) {
+  async asyncData ({ $prismic, error }) {
     const productList = await $prismic.api.query($prismic.predicates.at('document.type', 'product'), { pageSize: 50 })
     const productsDocument = await $prismic.api.getSingle('products')
 
