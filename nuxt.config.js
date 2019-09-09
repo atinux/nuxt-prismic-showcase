@@ -19,24 +19,18 @@ export default {
   ],
 
   /*
-  ** Nuxt.js Modules
+  ** Nuxt.js Build Modules
   */
-  modules: [
+  buildModules: [
     '~/modules/crawler',
     '~/modules/static',
-    'prismic-nuxt'
+    'prismic-nuxt',
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module'
   ],
 
   prismic: {
     endpoint: 'https://prismic-vuejs-showcase.prismic.io/api/v2',
     preview: '/preview/' // because we use nuxt generate
-  },
-
-  /*
-  ** Nuxt.js dev-modules
-  */
-  devModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
-  ]
+  }
 }
