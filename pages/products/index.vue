@@ -4,7 +4,7 @@
     <section class="products-section">
       <div class="l-wrapper">
         <header class="products-grid-header">
-          <div class="products-grid-header-title" v-html="$prismic.asHtml(productsDocument.data.title)" />
+          <prismic-rich-text class="products-grid-header-title" :field="productsDocument.data.title" />
         </header>
       </div>
       <div class="products-grid-items-wrapper">

@@ -6,8 +6,8 @@
         <div class="blog-post-image-wrapper">
           <prismic-image class="blog-post-image" :field="blogpost.data.image" />
         </div>
-        <div class="blog-post-title" v-html="$prismic.asHtml(blogpost.data.title)" />
-        <div class="blog-post-rich-content" v-html="$prismic.asHtml(blogpost.data.rich_content)" />
+        <prismic-rich-text class="blog-post-title" :field="blogpost.data.title" />
+        <prismic-rich-text class="blog-post-rich-content" :field="blogpost.data.rich_content" />
         <div class="blog-post-author-wrapper">
           <prismic-image
             v-if="blogpost.data.author.data"

@@ -4,8 +4,8 @@
       <prismic-image class="cta-banner-image" :field="slice.primary.image_banner" />
       <div class="cta-banner-content">
         <div class="cta-banner-box">
-          <div class="cta-banner-title" v-html="$prismic.asHtml(slice.primary.banner_title)" />
-          <div class="cta-banner-text" v-html="$prismic.asHtml(slice.primary.banner_text)" />
+          <prismic-rich-text class="cta-banner-title" :field="slice.primary.banner_title" />
+          <prismic-rich-text class="cta-banner-text" :field="slice.primary.banner_text" />
         </div>
         <div class="cta-banner-link-wrapper">
           <prismic-link class="cta-banner-link" :field="slice.primary.cta_link">

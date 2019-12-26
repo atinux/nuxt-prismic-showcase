@@ -2,7 +2,7 @@
   <section>
     <div class="l-wrapper">
       <header class="products-grid-header">
-        <div class="products-grid-header-title" v-html="$prismic.asHtml(slice.primary.section_title)" />
+        <prismic-rich-text class="products-grid-header-title" :field="slice.primary.section_title" />
         <div class="products-grid-header-button-wrapper">
           <prismic-link class="a-button" :field="slice.primary.button_link">
             {{ $prismic.asText(slice.primary.button_label) }}

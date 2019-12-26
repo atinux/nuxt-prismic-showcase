@@ -2,14 +2,14 @@
   <div>
     <header class="homepage-header">
       <div class="l-wrapper">
-        <div class="homepage-header-title" v-html="$prismic.asHtml(home.data.title)" />
+        <prismic-rich-text class="homepage-header-title" :field="home.data.title" />
       </div>
     </header>
 
     <section class="homepage-banner">
       <prismic-image class="homepage-banner-image" :field="home.data.banner_image" />
       <div class="homepage-banner-box-wrapper">
-        <div class="homepage-banner-box" v-html="$prismic.asHtml(home.data.banner_text)" />
+        <prismic-rich-text class="homepage-banner-box" :field="home.data.banner_text" />
       </div>
     </section>
 
@@ -105,13 +105,13 @@ export default {
     NumerotedItems,
     TextBlock
   },
-  head: {
-    title: 'Home'
-  },
   async asyncData ({ $prismic }) {
     const home = await $prismic.api.getSingle('homepage', { graphQuery })
 
     return { home }
+  },
+  head: {
+    title: 'Home'
   }
 }
 </script>

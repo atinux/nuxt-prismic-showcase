@@ -7,8 +7,8 @@
           <div class="product-hero-inner">
             <prismic-image class="product-hero-image" :field="product.data.product_image" />
             <div class="product-hero-content">
-              <div class="product-hero-name" v-html="$prismic.asHtml(product.data.product_name)" />
-              <div class="product-hero-rich-content" v-html="$prismic.asHtml(product.data.rich_content)" />
+              <prismic-rich-text class="product-hero-name" :field="product.data.product_name" />
+              <prismic-rich-text class="product-hero-rich-content" :field="product.data.rich_content" />
               <div class="product-hero-button-wrapper">
                 <prismic-link
                   class="a-button a-button--filled"
@@ -24,8 +24,8 @@
       </section>
       <section class="product-description">
         <div class="l-wrapper">
-          <div class="product-description-title" v-html="$prismic.asHtml(product.data.title)" />
-          <div class="product-description-content" v-html="$prismic.asHtml(product.data.product_description)" />
+          <prismic-rich-text class="product-description-title" :field="product.data.title" />
+          <prismic-rich-text class="product-description-content" :field="product.data.product_description" />
         </div>
       </section>
       <div class="product-separator-wrapper">
@@ -34,7 +34,7 @@
       <section>
         <div class="l-wrapper">
           <header class="products-grid-header">
-            <div class="products-grid-header-title" v-html="$prismic.asHtml(product.data.related_products_title)" />
+            <prismic-rich-text class="products-grid-header-title" :field="product.data.related_products_title" />
           </header>
         </div>
         <div class="products-grid-items-wrapper">
@@ -78,13 +78,18 @@ product {
 }`
 
 export default {
-  data: () => ({
-    product: null
-  }),
   async asyncData ({ params, $prismic }) {
     const product = await $prismic.api.getByUID('product', params.uid, { graphQuery })
 
     return { product }
+  },
+  data: () => ({
+    product: null
+  }),
+  methods: {
+    handleClickAddCart () {
+      window.alert('No. Not today.\nWe\'re integrating the GraphQL API at the moment, so coffee delivery is temporarily unavailable.')
+    }
   },
   head () {
     return {
@@ -92,11 +97,6 @@ export default {
       meta: [
         { vmid: 'description', name: 'description', content: this.$prismic.asText(this.product.data.product_description).substring(0, 158) }
       ]
-    }
-  },
-  methods: {
-    handleClickAddCart () {
-      window.alert('No. Not today.\nWe\'re integrating the GraphQL API at the moment, so coffee delivery is temporarily unavailable.')
     }
   }
 }

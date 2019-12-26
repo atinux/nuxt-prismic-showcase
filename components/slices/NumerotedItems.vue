@@ -2,15 +2,15 @@
   <section>
     <div class="l-wrapper">
       <header class="numeroted-items-header">
-        <div class="numeroted-items-header-title" v-html="$prismic.asHtml(slice.primary.title_section)" />
+        <prismic-rich-text class="numeroted-items-header-title" :field="slice.primary.title_section" />
       </header>
     </div>
     <div class="numeroted-items-items-wrapper">
-      <div
+      <prismic-rich-text
         v-for="(item, index) in slice.items"
         :key="index"
         class="numeroted-items-item-wrapper"
-        v-html="$prismic.asHtml(item.description_paragraph)"
+        :field="item.description_paragraph"
       />
     </div>
   </section>

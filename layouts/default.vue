@@ -79,14 +79,14 @@ export default {
       this.menuOpen = false
     }
   },
-  head () {
-    return {
-      titleTemplate: `%s | ${this.layout.site_name}`
-    }
-  },
   methods: {
     toggleMenu () {
       this.menuOpen = !this.menuOpen
+    }
+  },
+  head () {
+    return {
+      titleTemplate: `%s | ${this.layout.site_name}`
     }
   }
 }

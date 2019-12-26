@@ -24,6 +24,7 @@ export default {
   buildModules: [
     '~/modules/crawler',
     '~/modules/static',
+    // Doc: https://prismic-nuxt.js.org/
     'prismic-nuxt',
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'

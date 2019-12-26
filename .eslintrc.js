@@ -12,7 +12,5 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   // add your custom rules here
-  rules: {
-    'vue/no-v-html': 0
-  }
+  rules: {}
 }

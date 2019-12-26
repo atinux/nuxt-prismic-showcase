@@ -2,8 +2,8 @@
   <section>
     <div class="l-wrapper">
       <div class="text-block-inner">
-        <div class="text-block-title" v-html="$prismic.asHtml(slice.primary.title1)" />
-        <div class="text-block-richtext" v-html="$prismic.asHtml(slice.primary.paragraph)" />
+        <prismic-rich-text class="text-block-title" :field="slice.primary.title1" />
+        <prismic-rich-text class="text-block-richtext" :field="slice.primary.paragraph" />
       </div>
     </div>
   </section>
