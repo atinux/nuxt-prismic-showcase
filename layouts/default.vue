@@ -14,6 +14,7 @@
           >
             {{ text }}
           </prismic-link>
+          <a href="https://github.com/Atinux/nuxt-prismic-showcase">GitHub</a>
         </nav>
         <div id="header-burger" class="header-burger" @click="toggleMenu">
           <img
@@ -58,6 +59,7 @@
           >
             {{ text }}
           </prismic-link>
+          <a href="https://github.com/Atinux/nuxt-prismic-showcase">GitHub</a>
         </nav>
       </div>
     </footer>
