@@ -18,8 +18,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nuxt": "^2.11.0",
-    "prismic-nuxt": "jamespegg/prismic-nuxt#feat-prismic-vue"
+    "@nuxtjs/prismic": "^1.0.0",
+    "nuxt": "^2.11.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
