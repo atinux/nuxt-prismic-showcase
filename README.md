@@ -9,7 +9,7 @@
 - Based on [@nuxtjs/prismic](https://prismic-nuxt.js.org)
 - Support all different Nuxt.js modes (ssr / spa / static generated)
 - Display Prismic Toolbar to quick edit
-- Support Prismic Preview mode
+- Support Prismic Preview mode: [see video 🎬](https://www.youtube.com/watch?v=2DtDsnWe2MU)
 
 ## Project setup
 
