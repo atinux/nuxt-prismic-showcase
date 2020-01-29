@@ -11,6 +11,15 @@
 - Display Prismic Toolbar to quick edit
 - Support Prismic Preview mode
 
+## Preview mode
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=2DtDsnWe2MU">
+    <img src="https://img.youtube.com/vi/2DtDsnWe2MU/hqdefault.jpg"/><br>
+    See video 🎬
+  </a>
+</p>
+
 ## Project setup
 
 
